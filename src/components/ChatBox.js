@@ -3,13 +3,16 @@ import Input from './Input'
 
 
 function ChatBox ({
+  isChatBoxShown,
   chatId,
   textValue,
   setTextValue,
 }) {
 
   return(
-    <div style={{
+    <div style={!isChatBoxShown ? {
+      display: 'hidden',
+    } : {
       border: '1px solid black', 
       width: '500px', height: '700px',
       padding: '20px',
